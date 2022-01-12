@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+google-auth = "*"
+google = "*"
+
+[dev-packages]
+twine = "*"
+wheel = "*"
+setuptools = "*"
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+clean = "rm -r dist/ *.egg-info/"
+build = "python setup.py sdist"
