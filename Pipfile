@@ -17,5 +17,7 @@ python_version = "3.9"
 
 [scripts]
 clean = "rm -r dist/ *.egg-info/"
-deploy-test = "sh -c 'python setup.py sdist && twine upload -r testpypi dist/*'"
-deploy-prod = "sh -c 'python setup.py sdist && twine upload -r pypi dist/*'"
+build = "python setup.py sdist"
+build-zip = "python setup.py sdist --formats=zip"
+#deploy-test = "sh -c 'python setup.py sdist && twine upload -r testpypi dist/*'"
+#deploy-prod = "sh -c 'python setup.py sdist && twine upload -r pypi dist/*'"
