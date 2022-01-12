@@ -2,7 +2,7 @@ name: Upload Python Package to TestPyPI
 
 on:
   push:
-    tag:
+    tags:
       - '*'
 
 jobs:
