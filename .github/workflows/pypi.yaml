@@ -1,9 +1,9 @@
-name: Upload Python Package to TestPyPI
+name: Upload Python Package to PyPI
 
 on:
-  push:
-    tag:
-      - '*'
+  release:
+    types:
+      - created
 
 jobs:
   deploy:
@@ -26,5 +26,5 @@ jobs:
       uses: pypa/gh-action-pypi-publish@master
       with:
         user: __token__
-        password: ${{ secrets.TESTPYPI_TOKEN }}
-        repository_url: https://test.pypi.org/legacy/
+        password: ${{ secrets.PYPI_TOKEN }}
+
