@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+google-auth = "*"
+google = "*"
+
+[dev-packages]
+twine = "*"
+wheel = "*"
+setuptools = "*"
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+clean = "rm -r dist/ *.egg-info/"
+deploy-test = "sh -c 'python setup.py sdist && twine upload -r testpypi dist/*'"
+deploy-prod = "sh -c 'python setup.py sdist && twine upload -r pypi dist/*'"
